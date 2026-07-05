@@ -12,7 +12,7 @@ Throughout this room, I will explain the fundamentals of KQL and demonstrate sim
 
 **Kusto Query Language (KQL)** is a query language used to search, analyze, and explore large amounts of data stored in Azure services such as Azure Monitor, Log Analytics, and Microsoft Sentinel. It is designed specifically for working with log and telemetry data, making it a core tool for cloud monitoring and security investigations.
 
-KQL works by running queries against tables of data, where each table contains structured logs (for example, sign-in events, virtual machine activity, or network traffic). Instead of manually searching through raw logs, KQL allows you to filter, sort, and summarize data using readable commands like `where`, `project`, `summarize`, and `sort by`. This makes it much easier to quickly find relevant events in large datasets.
+KQL works by running queries against tables of data, where each table contains structured logs (for example, sign-in events, virtual machine activity, or network traffic). Instead of manually searching through raw logs, KQL allows you to filter, sort, and summarize data using readable commands like `where` and `project`. This makes it much easier to quickly find relevant events in large datasets.
 
 KQL is important because modern cloud environments generate massive amounts of log data every second, which would be impossible to analyze manually. Security analysts, cloud engineers, and SOC teams rely on KQL to investigate incidents, detect suspicious activity, and monitor system health. It is especially valuable in tools like Microsoft Sentinel, where fast and accurate log analysis is essential for identifying threats and responding to security events.
 
