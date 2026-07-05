@@ -78,5 +78,5 @@ In this particular case, an admin is using the environment's local scan engine t
 
 That’s the basics covered for now. We looked at what Azure security logs actually are, explored the `SecurityEvent` table, and ran a few simple KQL queries to start making sense of the data. From there, we filtered results, trimmed down columns to the most useful fields, and broke down key values like `TimeGenerated`, `Account`, and Computer actually represent in real investigations.
 
-We didn't go over much because this is just the foundation. In the next part, I’ll start building on these basics with more practical queries that I actually use, and we’ll move into digging deeper into logs and connecting events to understand what’s really happening.
+We didn't go over much because this is just the foundation. In the next part, I’ll start building on these basics with more practical queries that I actually use, and we’ll move into digging deeper into logs and connecting events to understand what’s really happening. If you wanted to learn more, you can use this resource: https://learn.microsoft.com/en-us/defender-xdr/incidents-overview
 
