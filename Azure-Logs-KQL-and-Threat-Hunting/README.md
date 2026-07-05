@@ -1,13 +1,5 @@
-# Cyber-Security-Labs
+## 📘 Azure Logs and KQL Fundamentals
 
-This repository contains my hands-on cybersecurity projects focused on Azure logging, KQL (Kusto Query Language), log analysis, and vulnerability scans/management in a live environment 
+A foundational project covering Azure logging basics and KQL queries. This includes how to query SecurityEvent logs and filter authentication events.
 
----
-
-# Projects
-
-## Azure Logs, KQL, and Threat Hunting
-
-This project covers the fundamentals of Azure logging and KQL, then builds into more advanced log analysis and threat hunting techniques. It demonstrates how to query security logs, filter events, and investigate activity within a live Azure environment.
-
-🔗 [Azure Logs / Threat Hunting](./Azure-Logs-KQL-and-Threat-Hunting/)
+🔗 [Brief Fundamentals](./Azure-Logs-and-KQL-Fundamentals/)
