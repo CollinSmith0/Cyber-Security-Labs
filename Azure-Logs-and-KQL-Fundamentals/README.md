@@ -24,3 +24,4 @@ KQL is important because modern cloud environments generate massive amounts of l
 
 To start exploring logs, we begin with the `SecurityEvent` table.
 
+
