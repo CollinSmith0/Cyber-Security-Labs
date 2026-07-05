@@ -1,6 +1,6 @@
 # Cyber-Security-Labs
 
-This repository contains my hands-on cybersecurity projects focused on Azure logging, KQL (Kusto Query Language), and log analysis.
+This repository contains my hands-on cybersecurity projects focused on Azure logging, KQL (Kusto Query Language), log analysis, and vulnerability scans/management in a live environment 
 
 ---
 
