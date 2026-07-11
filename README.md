@@ -16,6 +16,6 @@ This project covers the fundamentals of Azure logging and KQL, then builds into 
 
 This project series introduces the fundamentals of vulnerability management using the Tenable platform within a live Microsoft Azure environment. It explains the different types of vulnerability scans and demonstrates how authenticated and unauthenticated scans differ when assessing the same virtual machine.
 
-🔗 [Vulnerability Scanning with Tenable](./Vulnerability-Scanning-with-Tenable/)
+🔗 [Vulnerability Management](./Vulnerability-Mangement/)
 
 🔗 [Authenticated vs. Unauthenticated Scans](./Authenticated-vs-Unauthenticated-Scans/)
