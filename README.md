@@ -18,4 +18,3 @@ This project series introduces the fundamentals of vulnerability management usin
 
 🔗 [Vulnerability Management](./Vulnerability-Mangement/)
 
-🔗 [Authenticated vs. Unauthenticated Scans](./Authenticated-vs-Unauthenticated-Scans/)
