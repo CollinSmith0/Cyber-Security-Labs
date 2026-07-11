@@ -4,5 +4,3 @@ A foundational project covering Azure logging basics and KQL queries. This inclu
 
 🔗 [Brief Fundamentals](./Azure-Logs-and-KQL-Fundementals/)
 
-
-## 📘 Vulnerability Management 
