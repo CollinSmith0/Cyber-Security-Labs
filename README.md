@@ -27,6 +27,7 @@ This series introduces the fundamentals of vulnerability management using the Te
 
 Exploring Active Directory security within enterprise-style environments, covering user and group enumeration, privilege escalation, common misconfigurations, attack paths, and defensive concepts through hands-on labs.
 
+🔗 [Active Directory](./Active-Directory/)
 
 ## 🖥️ Windows Stand-Alone
 
