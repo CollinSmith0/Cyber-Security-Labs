@@ -6,6 +6,7 @@ This repository contains my hands-on cybersecurity projects focused on Azure log
 
 # Projects
 
+# 🔵 BLUE TEAM
 ## Azure Logs, KQL, and Threat Hunting
 
 This project covers the fundamentals of Azure logging and KQL, then builds into more advanced log analysis and threat hunting techniques. It demonstrates how to query security logs, filter events, and investigate activity within a live Azure environment.
