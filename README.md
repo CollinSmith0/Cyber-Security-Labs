@@ -19,3 +19,6 @@ This project series introduces the fundamentals of vulnerability management usin
 
 🔗 [Vulnerability Management](./Vulnerability-Mangement/)
 
+
+
+# 🔴 RED TEAM 
