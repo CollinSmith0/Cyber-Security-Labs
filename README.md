@@ -23,3 +23,16 @@ This series introduces the fundamentals of vulnerability management using the Te
 
 # 🔴 RED TEAM 
 
+## 🗂️ Active Directory
+
+Exploring Active Directory security within enterprise-style environments, covering user and group enumeration, privilege escalation, common misconfigurations, attack paths, and defensive concepts through hands-on labs.
+
+
+## 🖥️ Windows Stand-Alone
+
+Focuses on standalone Windows systems, demonstrating host enumeration, local privilege escalation, service and registry misconfigurations, credential access concepts, and Windows security fundamentals in isolated lab environments.
+
+
+## 🐧💻 Linux
+
+Introduces Linux security through practical labs, covering system enumeration, privilege escalation, file permission weaknesses, service misconfigurations, and common attack techniques while reinforcing secure system administration practices.
