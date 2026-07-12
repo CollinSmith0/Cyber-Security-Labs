@@ -41,3 +41,8 @@ Focuses on standalone Windows systems, demonstrating host enumeration, local pri
 Introduces Linux security through practical labs, covering system enumeration, privilege escalation, file permission weaknesses, service misconfigurations, and common attack techniques while reinforcing secure system administration practices.
 
 🔗 [Linux](./Linux/)
+
+## 🚫 Web Hacking
+
+Explores common web application security concepts through hands-on labs, covering reconnaissance, authentication flaws, input validation issues, access control weaknesses, and other common vulnerabilities while demonstrating systematic testing methodologies and secure development practices
+
