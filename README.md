@@ -46,3 +46,5 @@ Introduces Linux security through practical labs, covering system enumeration, p
 
 Explores common web application security concepts through hands-on labs, covering reconnaissance, authentication flaws, input validation issues, access control weaknesses, and other common vulnerabilities while demonstrating systematic testing methodologies and secure development practices
 
+🔗 [Web Hacking](./Web-Hacking/)
+
