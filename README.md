@@ -10,7 +10,7 @@ This repository contains my hands-on cybersecurity projects focused on Azure log
 
 ## 🔍 Azure Logs, KQL, and Threat Hunting
 
-This covers the fundamentals of Azure logging and KQL, then builds into more advanced log analysis and threat hunting techniques. It demonstrates how to query security logs, filter events, and investigate activity within a live Azure environment.
+This covers the fundamentals of Azure logging and KQL, then builds into more advanced log analysis and threat hunting techniques. It demonstrates how to query security logs, filter events, and investigate activity within a live Azure/Microsoft Defender environment.
 
 🔗 [Azure Logs / Threat Hunting](./Azure-Logs-KQL-and-Threat-Hunting/)
 
