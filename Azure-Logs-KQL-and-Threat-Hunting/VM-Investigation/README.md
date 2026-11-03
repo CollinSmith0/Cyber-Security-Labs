@@ -40,7 +40,7 @@ Next, I downloaded, installed, and launched Tor Browser on the virtual machine.
 
 **Tor Browser Installation:**
 
-!image.png
+<img width="800" alt="i2" src="image/i2.png">
 
 Tor Browser is a privacy-focused browser built on Mozilla Firefox technology that routes traffic through the Tor network.
 
@@ -58,7 +58,7 @@ From the device page, I selected **Collect investigation package**.
 
 **Investigation Package Collection:**
 
-!image.png
+<img width="800" alt="i3" src="image/i3.png">
 
 Microsoft Defender collected diagnostic and forensic information from the endpoint and made the resulting package available for download as a ZIP archive.
 
@@ -116,7 +116,7 @@ DeviceFileEvents
 
 **KQL File Activity Results:**
 
-!image.png
+<img width="800" alt="i4" src="image/i4.png">
 
 The query returned events associated with the folder and files I created.
 
@@ -165,7 +165,7 @@ DeviceProcessEvents
 
 **Tor Browser Process Activity:**
 
-!image.png
+<img width="800" alt="i5" src="image/i5.png">
 
 The query returned process events associated with Tor Browser, allowing me to examine executable paths, process execution details, and related activity.
 
@@ -193,7 +193,7 @@ Using the search functionality, I located process information associated with To
 
 **Tor Browser Evidence in Investigation Package:**
 
-!image.png
+<img width="800" alt="i6" src="image/i6.png">
 
 The collected process information provided additional evidence that Tor Browser had been executed on the endpoint.
 
