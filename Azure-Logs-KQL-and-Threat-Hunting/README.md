@@ -11,3 +11,8 @@ Configured an Azure Windows 11 honeypot, tested network connectivity using ICMP,
 
 Demonstrated endpoint isolation and recovery using Microsoft Defender for Endpoint by configuring Azure network access, monitoring ICMP connectivity, isolating a Windows 11 virtual machine, and verifying restored communication in alignment with NIST SP 800-61 incident response principles.
 🔗 [VM Isolation using Defender](./VM-ISO/README.md)
+
+Conducted an endpoint forensic investigation using Microsoft Defender for Endpoint and KQL to analyze file creation and modification events, trace Tor Browser execution, and collect and examine forensic artifacts from an investigation package.
+🔗 [VM Isolation using Defender](./VM-Investigation/README.md)
+
+
