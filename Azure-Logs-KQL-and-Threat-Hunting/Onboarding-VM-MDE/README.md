@@ -7,6 +7,7 @@ The virtual machine, named FINANCE-DB01, is configured to resemble a financial s
 Using Kusto Query Language (KQL), I verify that the endpoint is successfully onboarded and reporting telemetry to Microsoft Defender. Azure Network Security Group (NSG) rules remain restrictive during setup to ensure monitoring capabilities are established before exposing the honeypot to external traffic.
 
 This project establishes the foundation for future threat-hunting investigations, where I will analyze suspicious activity, identify attacker behavior, and investigate potential security threats within a live Azure environment.
+
 ---
 ### 1. Virtual Machine Deployment
 
