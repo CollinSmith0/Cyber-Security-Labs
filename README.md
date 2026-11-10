@@ -18,6 +18,8 @@ This covers manual fundamentals of Azure logging and KQL, then builds into more 
 
 Developing a Python-based threat hunting and security automation platform that ingests Windows Event Logs (JSON, CSV, and EVTX), detects suspicious activity through custom detection rules and event correlation, and uses a local AI model to assist with security investigations. The project incorporates MITRE ATT&CK mapping, Kusto Query Language (KQL), and automated incident reporting to demonstrate SOC analysis, detection engineering, and AI-assisted threat hunting.
 
+🔗 [AI Threat Hunting Engine](./AI-Threat-Hunting-Engine/)
+
 ## 🔓 Vulnerability Management with Tenable
 
 This series introduces the fundamentals of vulnerability management using the Tenable platform within a live Microsoft Azure environment. It explains the different types of vulnerability scans and demonstrates how authenticated and unauthenticated scans differ when assessing the same virtual machine.
